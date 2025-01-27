@@ -1,14 +1,10 @@
 const express = require('express')
 const { userRouter } = require("./routes/user")
-const { createCourseRoutes } = require("./routes/course")
+const { courseRouter } = require("./routes/course")
 const app = express();
 
-app.use("/user", userRouter)
-app.use("course", createCourseRoutes)
+app.use("/api/v1/user", userRouter)
+app.use("/api/v1/course", courseRouter)
 
-createUserRoutes(app);
-createCourseRoutes(app);
 
-app.listen(port, ()=> {
-    console.log(`Example app listening on port ${port}`);
-})
+app.listen(3000)
