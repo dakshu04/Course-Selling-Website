@@ -14,20 +14,20 @@ adminRouter.post("/signin", function(req, res) {
     })
 })
 
-adminRouter.put("/course", function(req, res) { //put for create a course, update the price/course
+adminRouter.put("/", function(req, res) { //put for create a course, update the price/course
     res.json({
         message: "signin endpoint"
     })
 })
 
 
-adminRouter.put("/course", function(req, res) { //put for create a course, update the price/course
+adminRouter.put("/", function(req, res) { //put for create a course, update the price/course
     res.json({
         message: "signin endpoint"
     })
 })
 
-adminRouter.get("/course/bulk", function(req, res) { //give me all the course that I have created
+adminRouter.get("/bulk", function(req, res) { //give me all the course that I have created
     res.json({
         message: "signin endpoint"
     })
