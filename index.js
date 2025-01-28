@@ -13,10 +13,7 @@ app.use("/api/v1/course", courseRouter)
 
 async function main() {
     //use dotenv to provide environment variable in seperate file
-    await mongoose.connect(process.env.MONGO_URL, {
-        useNewUrlParser: true, 
-        useUnifiedTopology: true 
-    }).then(() => {
+    await mongoose.connect(process.env.MONGO_URL).then(() => {
         console.log("Connected to MongoDB")
     }).catch(err => {
         console.log("Failed to connect to MongoDB", err);
@@ -25,3 +22,4 @@ async function main() {
     console.log("listening on port 3000");
     
 }
+main();
